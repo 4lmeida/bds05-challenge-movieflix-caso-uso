@@ -4,7 +4,7 @@ import com.devsuperior.movieflix.entities.User;
 
 import java.io.Serializable;
 
-public class UserDTO implements Serializable {
+public class UserDTO implements  Serializable {
 
     private Long id;
     private String name;
