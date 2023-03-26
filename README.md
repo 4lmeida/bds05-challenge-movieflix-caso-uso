@@ -110,14 +110,29 @@ usuários membros podem inserir avaliações no sistema.
    avaliação
 
 
-## JSON :floppy_disk:
+## SQL :floppy_disk:
 
 ### Usuários:
 
-| name | email           | password |token|
-|------|-----------------|----------|-------- |
-| Ana  | ana@hotmail.com | 123456   |true|
-| Bob  | bob@hotmail.com | 123456   |true|
+| name | email           | password |
+|------|-----------------|----------|
+| Ana  | ana@hotmail.com | 123456   |
+| Bob  | bob@hotmail.com | 123456   |
+
+### Gênero:
+
+| name    | 
+|---------|
+| Comédia |
+| Terror  |
+| Drama   |
+
+### Papel:
+
+| authority |
+|-----------|
+| MEMBER    |
+| VISITOR   |
 
 # Como rodar a aplicação :arrow_forward:
 
@@ -142,7 +157,7 @@ cd bds05-challenge-moveflix-caso-uso
 
 ## Licença
 
-The [MIT License]()(MIT)
+The [MIT License](/LICENSE)(MIT)
 
 Copyright :copyright: 2023 - Movie Flix
 
