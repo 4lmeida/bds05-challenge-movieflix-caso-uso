@@ -37,13 +37,11 @@ usuários membros podem inserir avaliações no sistema.
 
 :heavy_check_mark: Testa componentes da aplicação.
 
-:heavy_check_mark: Obtém o perfil do usuário logado.
-
 :heavy_check_mark: Listagem de filmes paginada, ordenadas alfabeticamente.
 
 :heavy_check_mark: Filtra os filmes  por gênero.
 
-:heavy_check_mark: Obtém página detalhada e registra avaliação .
+:heavy_check_mark: Obtém página detalhada e registra avaliação.
 
 :heavy_check_mark: Autorização e autenticação.
 
@@ -51,18 +49,26 @@ usuários membros podem inserir avaliações no sistema.
 
 # Layout :mag_right:
 
+- Layout:
+
+  ![Login](/src/main/assets/login-movieflix.png)
+
+  ![Listagem de filmes](/src/main/assets/list-movieflix.png)
+
+  ![Filme selecionado por id](/src/main/assets/movieId-movieflix.png)
+
 - Endpoints:
 
-![](https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao/blob/main/src/assets/bds4-challenge-movieflix-endpoint.gif)
+![](/src/main/assets/bds5-challenge-movieflix-caso-uso-endpoints.gif)
 
 - Testes:
 
-![](https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao/blob/main/src/assets/bds4-challenge-movieflix-tests.gif)
+![](/src/main/assets/bds5-challenge-movieflix-caso-uso-test.gif)
 
 # Modelo conceitual :page_with_curl:
-![Modelo Conceitual](https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao/blob/main/src/assets/domain-model-movieflix.png)
+![Modelo Conceitual](/src/main/assets/domain-model-movieflix.png)
 
-![Padrão camadas](https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao/blob/main/src/assets/padrao-camadas.png)
+![Padrão camadas](/src/main/assets/padrao-camadas.png)
 
 ## Linguagens, dependencias e libs utilizadas :books:
 - [JAVA](https://www.java.com/pt-BR/)
@@ -79,16 +85,50 @@ usuários membros podem inserir avaliações no sistema.
 - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html)
 
 
+## Casos de Uso
+
+### Efetuar login
+1. [IN] O usuário anônimo informa seu email e senha
+2. [OUT] O sistema informa um token válido
+### Listar filmes
+1. [OUT] O sistema apresenta uma listagem dos nomes de todos gêneros, bem como uma
+   listagem paginada com título, subtítulo, ano e imagem dos filmes, ordenada
+   alfabeticamente por título.
+2. [IN] O usuário visitante ou membro seleciona, opcionalmente, um gênero.
+3. [OUT] O sistema apresenta a listagem atualizada, restringindo somente ao gênero
+   selecionado.
+###  Visualizar detalhes do filme
+1. [IN] O usuário visitante ou membro seleciona um filme
+2. [OUT] O sistema informa título, subtítulo, ano, imagem e sinopse do filme, e também
+   uma listagem dos textos das avaliações daquele filme juntamente com nome do usuário
+   que fez cada avaliação.
+3. [IN] O usuário membro informa, opcionalmente, um texto para avaliação do filme.
+4. [OUT] O sistema apresenta os dados atualizados, já aparecendo também a avaliação
+   feita pelo usuário.
+### Exceção 3.1 - Texto vazio
+   3.1.1. O sistema apresenta uma mensagem de que não é permitido texto vazio na
+   avaliação
+
+
+## JSON :floppy_disk:
+
+### Usuários:
+
+| name | email           | password |token|
+|------|-----------------|----------|-------- |
+| Ana  | ana@hotmail.com | 123456   |true|
+| Bob  | bob@hotmail.com | 123456   |true|
+
 # Como rodar a aplicação :arrow_forward:
 
 Pré-requisitos: Java 17
 
 ```bash
 # clonar repositório
-https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao.git
+https://github.com/4lmeida/bds05-challenge-moveflix-caso-uso.git
 
-# entrar na pasta do projeto bds04-challenge-moveflix-dominio-autorizacao
-cd bds04-challenge-moveflix-dominio-autorizacao
+# entrar na pasta do projeto bds05-challenge-moveflix-caso-uso
+cd bds05-challenge-moveflix-caso-uso
 
 # executar o projeto
 ./mvnw spring-boot:run
@@ -96,12 +136,14 @@ cd bds04-challenge-moveflix-dominio-autorizacao
 # Autores
 
 | [<img src="https://avatars.githubusercontent.com/u/93017964?v=4" width=115><br><sub>Luís Almeida</sub>](https://github.com/4lmeida) | [<img src="https://avatars.githubusercontent.com/u/13897257?v=4" width=115><br><sub>Nélio Alves</sub>](https://github.com/acenelio) |
-| :---: | :---:
+| :---: | :---:|
 
 
 
 ## Licença
 
-The [MIT License](https://github.com/4lmeida/bds04-challenge-moveflix-dominio-autorizacao/blob/main/License)(MIT)
+The [MIT License]()(MIT)
 
 Copyright :copyright: 2023 - Movie Flix
+
+:top: [Voltar para o top](#Tópicos)
