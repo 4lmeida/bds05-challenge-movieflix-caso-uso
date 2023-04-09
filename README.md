@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/static/v1?label=Postman&message=API management&color=blue&style=for-the-badge&logo=postman"/>
   <img src="https://img.shields.io/static/v1?label=Apache&message=Dependency manager&color=blue&style=for-the-badge&logo=apache"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=RED&style=for-the-badge"/>
+  <img src="http://img.shields.io/static/v1?label=FASE&message=BACKEND&color=RED&style=for-the-badge"/>
 </p>  
 
 > Status do Projeto: :heavy_check_mark: (Concluído)
